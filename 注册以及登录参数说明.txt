@@ -1,0 +1,23 @@
+注册时传参：前端->后台{     //调用后台action signUp
+    boolean isTeacher
+    String username
+    String password
+    String major //专业
+    String college //学院
+    String tel //电话            
+}
+后台返回{
+   int loginResult //0表示成功 1表示用户名存在 2表示未知错误
+}
+
+登录时传参 前端->后台{     //调用后台action loginIn
+   boolean isTeacher
+   String username
+   String password
+}
+后台返回{
+   boolean isSuccess //若登录未成功，返回false即可，后面需要返回的参数可不进行传递
+   boolean isTeacher  //若isTeacher 为true，则返回教师的username，image（头像）， college，position（职位），tel以及schedule（日程）
+                      //若isTeacher为false，则返回学生username，image(头像)，college，major，tel以及order（预约信息）
+   ...
+}
