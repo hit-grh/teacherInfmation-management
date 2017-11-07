@@ -1,0 +1,90 @@
+<div class="row">
+                    <!--个人图片-->
+                    <div class="4u">
+                        <span class="me image image-full">
+                            <img onmousedown="signInCheck()" src="images/me.jpg"/>
+                        </span>
+                    </div>
+                    <!--个人信息-->
+                    <div class="8u">
+                        <form method="POST">
+                            <div class="row first-child">
+                                <div class="6u">
+                                    <label for="studentName">
+                                        姓名
+                                    </label>
+                                    <input id="studentName" name="studentName" value=<%="'"+student.getStudentName()+"'"%> placeholder="姓名" style="background-color:#EEE" type="text"/>
+                                </div>
+                                <div class="6u">
+                                    <label for="studentCollege">
+                                        學院
+                                    </label>
+                                    <input id="studentCollege" name="studentCollege" value=<%="'"+student.getCollege()+"'"%>  placeholder="学院" style="background-color:#EEE" type="text"/>
+                                </div>
+                            </div>
+                            <div class="row half">
+                            	<div class="6u">
+                                    <label for="studentTel">
+                                        联系方式
+                                    </label>
+                                    <input id="studentTel" name="studentTel" value=<%="'"+student.getPhone()+"'"%> placeholder="联系方式" style="background-color:#EEE" type="text"/>
+                                </div>
+                                <div class="6u">
+                                    <label for="studentMajor">
+                                        專業
+                                    </label>
+                                    <input id="studentMajor" name="studentMajor" value=<%="'"+student.getMajor()+"'"%> placeholder="专业" style="background-color:#EEE" type="text"/>
+                                </div>
+                                
+                            </div>
+                            <div class="row half">
+                                <div class="6u">
+                                    <button style="text-align: center；background-color:#02FCEC；border-radius: 8px;" type="submit"  onclick="changeStudentInf()">更改信息</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="8u" style="padding-top:2em">
+                            <p>
+                                Hi!
+                                <strong>
+									<%= "'"+student.getStudentName()+"'"%>
+                                </strong>
+                                。 您的预约如下
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                预约编号
+                            </th>
+                            <th>
+                                预约时间
+                            </th>
+                            <th>
+                                教师
+                            </th>
+                            <th>
+                                地点
+                            </th>
+                            <th>
+                                审核状态
+                            </th>
+                            <th>
+                                取消
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                            <td>
+                                <button onclick="cancelOrder($this.val())" style="height:100%;width:100%;border:0;background-color:white;">
+                                    取消
+                                </button>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
