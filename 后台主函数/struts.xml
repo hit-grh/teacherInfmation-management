@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+         <package name="xaingmu" extends="struts-default, json-default" namespace="/">
+	        	
+	        	<!-- 登陆 -->
+	        	<action  name="LoginIn" class="com.struts2.action.Loginin" method="execute">
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+	        	<!-- 注册-->
+	        	<action  name="SignUp" class="com.struts2.action.Signup" >
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+	        	<!-- 退出登录-->
+	        	<action  name="SignOut" class="com.struts2.action.SignOut">
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+	        	
+	        	<!-- 搜索教师-->
+	        	<action  name="searchTeacher" class="com.struts2.action.WebFunction" method="SearchTeacher">
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+	        	<!-- 预约教师-->
+	        	<action  name="addOrder" class="com.struts2.action.WebFunction" method="addOrder">
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+	        	<!-- 取消预约-->
+	        	<action  name="cancelOrder" class="com.struts2.action.WebFunction" method="cancelOrder">
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+	        	<!-- 教师增加日程-->
+	        	<action  name="addSchedule" class="com.struts2.action.WebFunction" method="addSchedule">
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+	        	<!-- 老师同意预约-->
+	        	<action  name="teacherAgreeOrder" class="com.struts2.action.WebFunction" method="teacherAgreeOrder">
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+	        	<!-- 老师拒绝预约-->
+	        	<action  name="teacherCancelOrder" class="com.struts2.action.WebFunction" method="teacherCancelOrder">
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+	        	<!--更改老师信息-->
+	        	<action  name="changeTeacherInf" class="com.struts2.action.WebFunction" method="changeTeacherInf">
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+	        	<!--更改学生信息-->
+	        	<action  name="changeStudentInf" class="com.struts2.action.WebFunction" method="changeStudentInf">
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+                <!--随机选取老师显示 -->
+	        	<action  name="chooseTeacher" class="com.struts2.action.WebFunction" method="chooseTeacher">
+		        	<result type="json">
+		        	<param name="root">result</param>
+		        	</result>
+	        	</action>
+	        	
+         </package>
+
+</struts>
